@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 from langchain_ollama import ChatOllama
+from src.langchain_course.react_agent.react_agent import call_react_agent
 
 load_dotenv()
 
@@ -50,8 +51,9 @@ def call_ollama() -> None:
 
 
 def main() -> None:
-    call_groq()
+    # call_groq()
     # call_ollama()
+    call_react_agent()
 
 
 if __name__ == "__main__":
